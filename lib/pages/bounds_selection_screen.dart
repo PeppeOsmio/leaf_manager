@@ -439,6 +439,7 @@ class _BoundsSelectionScreenState extends State<BoundsSelectionScreen>
             : MapTheme.getInstance().darkStyle);
   }
 
+  //
   Future<BitmapDescriptor> loadMarkerIcon() async {
     double? dpr = createLocalImageConfiguration(context).devicePixelRatio;
 
