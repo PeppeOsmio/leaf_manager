@@ -1,0 +1,97 @@
+{
+    "landing-title": "Leaf Manager •\nL'agricoltura non è mai stata così semplice",
+    "landing-subtitle": "Crea, gestisci e modifica i confini e i sensori del tuo campo.",
+    "landing-go-button": "Continua",
+
+    "sensors": "Sensori",
+    "contact-us": "Contattaci",
+    "settings": "Impostazioni",
+    "tap-plus": "Tocca il ''+'' per aggiungere un nuovo terreno",
+
+    "signup-title": "Crea un nuovo account",
+    "signup-create-button": "Crea account",
+    "continue-with-google": "Continua con Google",
+    "already-have-account": "Hai già un account? Accedi",
+    "dont-have-account": "Non hai un account? Registrati",
+    "login-title": "Accedi ad un account esistente",
+    "login-button": "Accedi",
+    "input-first-name": "Nome",
+    "input-last-name": "Cognome",
+    "input-email": "Email",
+    "input-password": "Password",
+    "input-confirm-password": "Conferma Password",
+
+    "password-requirement-0": "Almeno 8 caratteri",
+    "password-requirement-1": "Deve contenere lettere minuscole e maiuscole",
+    "password-requirement-2": "Deve contenere un simbolo o un numero",
+
+    "dashboard-welcome-title": "Buongiorno,",
+
+    "new-farm-title": "Crea un nuovo campo",
+    "new-farm-subtitle": "Per favore completa i seguenti campi per creare un nuovo terreno.",
+    "new-farm-name": "Nome campo",
+    "new-farm-date": "Prima coltivazione",
+    "new-farm-crop": "Ortaggio coltivato",
+    "new-farm-map": "Perimetro campo",
+    "new-farm-min-verteces": "Aggiungi almeno tre punti al tuo poligono",
+    "land-name-exists": "Possiedi già un terreno con questo nome",
+
+    "crop-selection-title": "Seleziona un ortaggio",
+    "search-crop": "Cerca ortaggio...",
+    "clear": "Cancella",
+
+    "banana": "Banana",
+    "brown-onion": "Cipolla marrone",
+    "cherry-tomato": "Pomodoro ciliegino",
+    "cucumber": "Zucchina",
+    "eggplant": "Melanzana",
+    "ginger": "Zenzero",
+    "lemon": "Limone",
+    "orange": "Arancia",
+    "potato": "Patata",
+    "red-potato": "Patata rossa",
+    "strawberry": "Fragola",
+    "tomato": "Pomodoro",
+    "white-grape": "Uva bianca",
+
+    "fruit": "frutto",
+    "vegetable": "verdura",
+    "plant": "pianta",
+    "berry": "bacca",
+
+    "empty-land-name": "Aggiungi un nome al tuo campo per continuare",
+    "empty-crop-id": "Seleziona un ortaggio per continuare",
+    "empty-date": "Aggiungi una data per continuare",
+    "empty-latlngs": "Definisci il perimetro del campo per continuare",
+
+    "gps-disabled": "Servizi di geolocalizzazione disabilitati",
+    "gps-permission-denied": "Permessi di geolocalizzazione negati",
+    "gps-permission-perm-denied": "Permessi di geolocalizzazione permanentemente negati",
+    "bounds-screen-title": "Modifica perimetro",
+
+    "clear-markers-title": "Rimuovere tutti i punti?",
+    "clear-markers-content": "Sei sicuro di voler eliminare tutti i punti dalla mappa?",
+    "clear-markers-button": "Elimina tutti",
+    
+    "edit": "Modifica",
+    "delete": "Elimina",
+    "cancel": "Annulla",
+    "delete-title": "Eliminare questo terreno?",
+    "delete-content": "Sei sicuro di voler eliminare questo terreno?",
+
+    "overview": "Panoramica",
+    "perimeter": "Perimetro",
+    "date-first-cultivation": "Data di prima coltivazione",
+    "details": "Dettagli",
+
+    "invalid-email": "Inserisci un email valida",
+    "invalid-password": "Inserisci una password valida",
+    "server-error": "Qualcosa è andato storto",
+    "wrong-credentials": "Password or email errata",
+
+    "invalid-first-name": "Inserisci il tuo nome",
+    "invalid-last-name": "Inserisci il tuo cognome",
+    "email-exists": "Email già utilizzata",
+
+    "generic-error-message": "Qualcosa è andato storto",
+    "network-error": "Controlla la tua connessione"}
