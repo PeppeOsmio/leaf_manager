@@ -1,0 +1,4 @@
+#Mon Apr 11 00:00:14 CEST 2022
+base.0=/home/giuseppe/progetti_flutter/leaf_03/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

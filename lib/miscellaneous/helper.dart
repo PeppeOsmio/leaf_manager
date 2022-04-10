@@ -93,8 +93,7 @@ class Helper {
   }
 
   static Future<Credentials?> loadUserCredentials() async {
-
-    if(kIsWeb){
+    if (kIsWeb) {
       return null;
     }
 
@@ -115,7 +114,7 @@ class Helper {
     storage.write(key: "password", value: credentials.password);
   }
 
-  static Future deleteUserCredentials() async{
+  static Future deleteUserCredentials() async {
     const storage = FlutterSecureStorage();
     storage.delete(key: "email");
     storage.delete(key: "password");
@@ -140,14 +139,13 @@ class Helper {
     }
     if (password.isEmpty) throw RegisterException("invalid-password");
 
-    http.Response response = await http.post(
-        Uri.parse("https://www.emanuelefrascella.it/php/register.php"),
-        body: {
-          "userEmail": email,
-          "firstName": firstName,
-          "lastName": lastName,
-          "password": password
-        });
+    http.Response response = await http
+        .post(Uri.parse("http://139.162.164.46:90//register.php"), body: {
+      "userEmail": email,
+      "firstName": firstName,
+      "lastName": lastName,
+      "password": password
+    });
 
     late Map map;
 
@@ -173,7 +171,7 @@ class Helper {
     if (password.isEmpty) throw LoginException("invalid-password");
 
     http.Response response = await http.post(
-        Uri.parse("https://www.emanuelefrascella.it/php/login.php"),
+        Uri.parse("http://139.162.164.46:90//login.php"),
         body: {"userEmail": email, "password": password});
 
     Map map;
@@ -333,14 +331,14 @@ class Helper {
     late http.Response response;
 
     response = await http.post(
-        Uri.parse("https://www.emanuelefrascella.it/php/getlandsids.php"),
+        Uri.parse("http://139.162.164.46:90//getlandsids.php"),
         body: {"userId": userId.toString()});
 
     List landIds = jsonDecode(response.body);
 
     for (int i = 0; i < landIds.length; i++) {
       response = await http.post(
-          Uri.parse("https://www.emanuelefrascella.it/php/getlanddetails.php"),
+          Uri.parse("http://139.162.164.46:90//getlanddetails.php"),
           body: {"userId": userId.toString(), "landId": landIds[i]["landId"]});
       if (response.statusCode != 200) {
         return Future.error("error");
@@ -356,7 +354,7 @@ class Helper {
     return lands;
     /*try {
       response = await http.post(
-          Uri.parse("https://www.emanuelefrascella.it/php/getlandsids.php"),
+          Uri.parse("http://139.162.164.46:90//getlandsids.php"),
           body: {"userId": userId});
 
       List landIds = jsonDecode(response.body);
@@ -364,7 +362,7 @@ class Helper {
       for (int i = 0; i < landIds.length; i++) {
         response = await http.post(
             Uri.parse(
-                "https://www.emanuelefrascella.it/php/getlanddetails.php"),
+                "http://139.162.164.46:90//getlanddetails.php"),
             body: {"userId": userId, "landId": landIds[i]["landId"]});
         if (response.statusCode != 200) {
           return Future.error("error");
@@ -391,24 +389,21 @@ class Helper {
     }*/
   }
 
-  static Future editLand(int userId, int landId, List<LatLng> coords) async{
-    var response = await http.post(
-      Uri.parse("https://www.emanuelefrascella.it/php/edit.php"), 
-      body: {
-        "userId": userId.toString(),
-        "landId": landId.toString(),
-        "coords": CoordsHelper.encodeCoords(coords)
-      }
-    );
+  static Future editLand(int userId, int landId, List<LatLng> coords) async {
+    var response =
+        await http.post(Uri.parse("http://139.162.164.46:90//edit.php"), body: {
+      "userId": userId.toString(),
+      "landId": landId.toString(),
+      "coords": CoordsHelper.encodeCoords(coords)
+    });
     print("editLand: " + response.body);
   }
 
   static Future deleteLand(int landId) async {
-    var response = await http.post(
-        Uri.parse("https://www.emanuelefrascella.it/php/deleteland.php"),
-        body: {
-          "landId": landId.toString(),
-        });
+    var response = await http
+        .post(Uri.parse("http://139.162.164.46:90//deleteland.php"), body: {
+      "landId": landId.toString(),
+    });
     if (response.statusCode == 200) {
       if (response.body == "success") {
         return;
@@ -438,15 +433,14 @@ class Helper {
     late http.Response response;
 
     String latlngString = CoordsHelper.encodeCoords(coords);
-    response = await http.post(
-        Uri.parse('https://www.emanuelefrascella.it/php/createland.php'),
-        body: {
-          'name': landName,
-          'cropName': cropName,
-          'dateFirstCultivation': date,
-          "userId": userId.toString(),
-          "coords": latlngString
-        }).timeout(const Duration(seconds: 20));
+    response = await http
+        .post(Uri.parse('http://139.162.164.46:90//createland.php'), body: {
+      'name': landName,
+      'cropName': cropName,
+      'dateFirstCultivation': date,
+      "userId": userId.toString(),
+      "coords": latlngString
+    }).timeout(const Duration(seconds: 20));
 
     if (!(response.statusCode == 200)) {
       throw LandCreationException(message: "general-error-message");
@@ -464,8 +458,7 @@ class Helper {
     List<LatLng> coordinates = [];
 
     var response = await http.post(
-        Uri.parse(
-            'https://www.emanuelefrascella.it/php/getlandcoordinates.php'),
+        Uri.parse('http://139.162.164.46:90//getlandcoordinates.php'),
         body: {"landId": landId.toString()});
     Map<String, dynamic> map = jsonDecode(response.body);
     String stringCoords = map["markers"];

@@ -3,7 +3,7 @@
   "packages": [
     {
       "name": "archive",
-      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/archive-3.1.6",
+      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/archive-3.3.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -153,7 +153,7 @@
     },
     {
       "name": "flutter_svg",
-      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_svg-1.0.0",
+      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_svg-1.0.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -201,7 +201,7 @@
     },
     {
       "name": "google_fonts",
-      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/google_fonts-2.1.0",
+      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/google_fonts-2.3.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -213,19 +213,19 @@
     },
     {
       "name": "google_maps_flutter",
-      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/google_maps_flutter-2.1.1",
+      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/google_maps_flutter-2.1.3",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
     {
       "name": "google_maps_flutter_platform_interface",
-      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/google_maps_flutter_platform_interface-2.1.3",
+      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/google_maps_flutter_platform_interface-2.1.5",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "google_maps_flutter_web",
-      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/google_maps_flutter_web-0.3.2",
+      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/google_maps_flutter_web-0.3.2+1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -249,7 +249,7 @@
     },
     {
       "name": "image",
-      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/image-3.1.0",
+      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/image-3.1.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -267,7 +267,7 @@
     },
     {
       "name": "js_wrapping",
-      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/js_wrapping-0.7.3",
+      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/js_wrapping-0.7.4",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -315,31 +315,49 @@
     },
     {
       "name": "path_provider",
-      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-2.0.6",
+      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-2.0.9",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "path_provider_android",
+      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_android-2.0.12",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "path_provider_ios",
+      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_ios-2.0.8",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
     {
       "name": "path_provider_linux",
-      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.1.0",
+      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.1.5",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "path_provider_macos",
-      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_macos-2.0.2",
+      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_macos-2.0.5",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "path_provider_platform_interface",
-      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_platform_interface-2.0.1",
+      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_platform_interface-2.0.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "path_provider_windows",
-      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-2.0.3",
+      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-2.0.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "pedantic",
+      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/pedantic-1.11.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -351,13 +369,13 @@
     },
     {
       "name": "platform",
-      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/platform-3.0.2",
+      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/platform-3.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "plugin_platform_interface",
-      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-2.0.2",
+      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-2.1.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -441,13 +459,13 @@
     },
     {
       "name": "win32",
-      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/win32-2.2.10",
+      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/win32-2.5.1",
       "packageUri": "lib/",
-      "languageVersion": "2.13"
+      "languageVersion": "2.15"
     },
     {
       "name": "xdg_directories",
-      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/xdg_directories-0.2.0",
+      "rootUri": "file:///home/giuseppe/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/xdg_directories-0.2.0+1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -470,7 +488,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2022-03-17T01:01:12.662272Z",
+  "generated": "2022-04-10T21:58:33.487296Z",
   "generator": "pub",
-  "generatorVersion": "2.16.1"
+  "generatorVersion": "2.16.2"
 }

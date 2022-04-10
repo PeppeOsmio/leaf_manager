@@ -1,0 +1,69 @@
+{ 
+    "crops": [
+        {
+            "id": 0,
+            "name": "banana",
+            "type": "fruit"
+        },
+        {
+            "id": 1,
+            "name": "brown-onion",
+            "type": "vegetable"
+        },
+        {
+            "id": 2,
+            "name": "cherry-tomato",
+            "type": "fruit"
+        },
+        {
+            "id": 3,
+            "name": "cucumber",
+            "type": "vegetable"
+        },
+        {
+            "id": 4,
+            "name": "eggplant",
+            "type": "vegetable"
+        },
+        {
+            "id": 5,
+            "name": "ginger",
+            "type": "plant"
+        },
+        {
+            "id": 6,
+            "name": "lemon",
+            "type": "fruit"
+        },
+        {
+            "id": 7,
+            "name": "orange",
+            "type": "fruit"
+        },
+        {
+            "id": 8,
+            "name": "potato",
+            "type": "vegetable"
+        },
+        {
+            "id": 9,
+            "name": "red-potato",
+            "type": "vegetable"
+        },
+        {
+            "id": 10,
+            "name": "strawberry",
+            "type": "berry"
+        },
+        {
+            "id": 11,
+            "name": "tomato",
+            "type": "fruit"
+        },
+        {
+            "id": 12,
+            "name": "white-grape",
+            "type": "fruit"
+        }
+    ]
+}
