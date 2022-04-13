@@ -19,4 +19,4 @@ Compile instructions for Android:
   * Run the command `flutter build apk --split-per-abi` to build the APK files
   * In the project sub directory `build/app/outputs/apk/release` there will be 3 APK files
   * Choose the correct APK according to your smartphone's CPU architecture. It will probably be arm64
-  * Install this apk on your phone
+  * Install this APK on your phone
