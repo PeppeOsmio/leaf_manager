@@ -14,6 +14,7 @@ import 'dart:convert';
 import 'dart:ui' as ui;
 import 'dart:typed_data';
 import 'dart:core';
+import 'dart:developer' as dev;
 
 import 'package:leaf_03/exceptions.dart';
 
@@ -156,7 +157,7 @@ class Helper {
     }
 
     if (map["message"] == "success") {
-      return User(int.parse(map["id"]), firstName, lastName);
+      return User(map["id"], firstName, lastName);
     } else if (map["message"] == "email_exists") {
       throw RegisterException("email-exists");
     } else {
@@ -182,7 +183,7 @@ class Helper {
     }
 
     if (map["message"] == "success") {
-      return User(int.parse(map["id"]), map["firstName"], map["lastName"]);
+      return User(map["id"], map["firstName"], map["lastName"]);
     } else if (map["message"] == "wrong_credentials") {
       throw LoginException("wrong-credentials");
     } else {
@@ -337,15 +338,22 @@ class Helper {
     List landIds = jsonDecode(response.body);
 
     for (int i = 0; i < landIds.length; i++) {
+      dev.log('d');
       response = await http.post(
           Uri.parse("http://139.162.164.46:90//getlanddetails.php"),
-          body: {"userId": userId.toString(), "landId": landIds[i]["landId"]});
+          body: {
+            "userId": userId.toString(),
+            "landId": landIds[i]["landId"].toString()
+          });
+
       if (response.statusCode != 200) {
         return Future.error("error");
       }
+
       List details = jsonDecode(response.body);
+      dev.log(details.toString());
       lands.add(Farm(
-        int.parse(landIds[i]['landId']),
+        landIds[i]['landId'],
         details[0]['name'],
         details[0]['fk_cropName'],
         DateTime.parse(details[0]['dateFirstCultivation']),
@@ -460,6 +468,7 @@ class Helper {
     var response = await http.post(
         Uri.parse('http://139.162.164.46:90//getlandcoordinates.php'),
         body: {"landId": landId.toString()});
+    dev.log(response.body);
     Map<String, dynamic> map = jsonDecode(response.body);
     String stringCoords = map["markers"];
     if (response.statusCode != 200) {

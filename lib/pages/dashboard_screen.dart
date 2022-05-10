@@ -213,6 +213,7 @@ class _FieldsFragmentState extends State<_FieldsFragment> {
       future: _loadFarmsList(),
       builder: (BuildContext context, AsyncSnapshot<List<Farm>> snapshot) {
         if (snapshot.hasError) {
+          log(snapshot.error.toString());
           return Expanded(
               child: FadeAnimation(
             child: Container(

@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:leaf_03/animation/fade_animation.dart';
 import 'package:leaf_03/db.dart';
@@ -50,28 +52,30 @@ class LoginScreenState extends State<LoginScreen> {
               delay: Duration(milliseconds: 300 * (ttbDelayIndex++)),
               //toolbar di sopra
               child: Toolbar(
-                navigationItem: 
-                //bottone per andare indietro
-                ActionItem(
+                navigationItem:
+                    //bottone per andare indietro
+                    ActionItem(
                   icon: Icon(
                     Icons.chevron_left_outlined,
                     color: UI.textPrimaryColor(context),
                   ),
                   onPressed: () {
-                    if(!_isPressed){
+                    if (!_isPressed) {
                       _isPressed = true;
                       Route route = PageRouteBuilder(
-                        pageBuilder: (context, animation, secondaryAnimation) =>
-                            const LandingScreen(),
-                        transitionsBuilder:
-                            (context, animation, secondaryAnimation, child) =>
-                                FadeTransition(
-                                  opacity: animation,
-                                  child: child,
-                                ),
-                        transitionDuration: const Duration(milliseconds: 500));
+                          pageBuilder:
+                              (context, animation, secondaryAnimation) =>
+                                  const LandingScreen(),
+                          transitionsBuilder:
+                              (context, animation, secondaryAnimation, child) =>
+                                  FadeTransition(
+                                    opacity: animation,
+                                    child: child,
+                                  ),
+                          transitionDuration:
+                              const Duration(milliseconds: 500));
                       Navigator.pushReplacement(context, route);
-                    }else{
+                    } else {
                       return;
                     }
                   },
@@ -92,9 +96,9 @@ class LoginScreenState extends State<LoginScreen> {
                         child: FadeAnimation(
                           delay:
                               Duration(milliseconds: 300 * (ttbDelayIndex++)),
-                          child: 
-                          //titolo della pagina di login
-                          Text(
+                          child:
+                              //titolo della pagina di login
+                              Text(
                             Localization.of(context).getString("login-title"),
                             style: UI.textStyle(
                                 typeface: UI.headline0,
@@ -109,8 +113,8 @@ class LoginScreenState extends State<LoginScreen> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           FadeAnimation(
-                            delay: Duration(
-                                milliseconds: 300 * (ttbDelayIndex++)),
+                            delay:
+                                Duration(milliseconds: 300 * (ttbDelayIndex++)),
                             child: Column(
                                 mainAxisSize: MainAxisSize.min,
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -126,9 +130,8 @@ class LoginScreenState extends State<LoginScreen> {
                                     controller: _emailController,
                                     decoration: InputDecoration(
                                         filled: true,
-                                        fillColor:
-                                            UI.textfieldBackgroundColor(
-                                                context),
+                                        fillColor: UI
+                                            .textfieldBackgroundColor(context),
                                         contentPadding:
                                             const EdgeInsets.symmetric(
                                                 vertical: 16.0,
@@ -137,8 +140,8 @@ class LoginScreenState extends State<LoginScreen> {
                                         hintStyle: UI.textStyle(
                                             typeface: UI.headline4.copyWith(
                                                 fontWeight: FontWeight.w400),
-                                            color: UI
-                                                .textSecondaryColor(context)),
+                                            color:
+                                                UI.textSecondaryColor(context)),
                                         border: OutlineInputBorder(
                                             borderSide: BorderSide.none,
                                             borderRadius:
@@ -154,8 +157,8 @@ class LoginScreenState extends State<LoginScreen> {
                             height: 24,
                           ),
                           FadeAnimation(
-                            delay: Duration(
-                                milliseconds: 300 * (ttbDelayIndex++)),
+                            delay:
+                                Duration(milliseconds: 300 * (ttbDelayIndex++)),
                             child: Column(
                                 mainAxisSize: MainAxisSize.min,
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -173,9 +176,8 @@ class LoginScreenState extends State<LoginScreen> {
                                     autocorrect: false,
                                     decoration: InputDecoration(
                                         filled: true,
-                                        fillColor:
-                                            UI.textfieldBackgroundColor(
-                                                context),
+                                        fillColor: UI
+                                            .textfieldBackgroundColor(context),
                                         contentPadding:
                                             const EdgeInsets.symmetric(
                                                 vertical: 16.0,
@@ -186,8 +188,8 @@ class LoginScreenState extends State<LoginScreen> {
                                         hintStyle: UI.textStyle(
                                             typeface: UI.headline4.copyWith(
                                                 fontWeight: FontWeight.w400),
-                                            color: UI
-                                                .textSecondaryColor(context)),
+                                            color:
+                                                UI.textSecondaryColor(context)),
                                         suffixIconConstraints:
                                             const BoxConstraints(
                                                 maxWidth: 36.0,
@@ -240,61 +242,66 @@ class LoginScreenState extends State<LoginScreen> {
                   FadeAnimation(
                     direction: FadeDirection.bottomToTop,
                     delay: Duration(milliseconds: 300 * (bttDelayIndex++)),
-                    child: 
-                    //bottone per il login
-                    FloatyWidgetButton.primary(
-                        onPressed: () async {
-                          if(!_isPressed){
-                            _isPressed = true;
-                            try {
-                            var user = await Helper.login2(
-                                _emailController.text,
-                                _passwordController.text);
-                            Helper.writeUserCredentials(Credentials(
-                                _emailController.text,
-                                _passwordController.text));
-                            Route route = MaterialPageRoute(
-                                builder: (context) =>
-                                    DashboardScreen(user: user));
-                            Navigator.pushReplacement(context, route);
-                          } on LoginException catch (e) {
-                            _isPressed = false;
-                            Helper.showSnackBar(
-                                message: Text(
+                    child:
+                        //bottone per il login
+                        FloatyWidgetButton.primary(
+                            onPressed: () async {
+                              if (!_isPressed) {
+                                _isPressed = true;
+                                try {
+                                  var user = await Helper.login2(
+                                      _emailController.text,
+                                      _passwordController.text);
+                                  Helper.writeUserCredentials(Credentials(
+                                      _emailController.text,
+                                      _passwordController.text));
+                                  Route route = MaterialPageRoute(
+                                      builder: (context) =>
+                                          DashboardScreen(user: user));
+                                  Navigator.pushReplacement(context, route);
+                                } on LoginException catch (e) {
+                                  log(e.toString());
+                                  _isPressed = false;
+                                  Helper.showSnackBar(
+                                      message: Text(
+                                        Localization.of(context)
+                                            .getString(e.message.toString()),
+                                        style: UI.textStyle(
+                                            typeface: UI.body,
+                                            color: UI
+                                                .textPrimaryColorDark(context)),
+                                      ),
+                                      context: context,
+                                      snackBarBehavior:
+                                          SnackBarBehavior.floating);
+                                } catch (e) {
+                                  _isPressed = false;
+                                  log(e.toString());
+                                  Helper.showSnackBar(
+                                      message: Text(Localization.of(context)
+                                          .getString("network-error")),
+                                      context: context,
+                                      snackBarBehavior:
+                                          SnackBarBehavior.floating);
+                                }
+                              } else {
+                                return;
+                              }
+                            },
+                            child: SizedBox(
+                              height: 52,
+                              child: Container(
+                                alignment: Alignment.center,
+                                child: Text(
                                   Localization.of(context)
-                                      .getString(e.message.toString()),
+                                      .getString("login-button"),
                                   style: UI.textStyle(
-                                      typeface: UI.body,
+                                      typeface: UI.button,
                                       color: UI.textPrimaryColorDark(context)),
                                 ),
-                                context: context,
-                                snackBarBehavior: SnackBarBehavior.floating);
-                          } catch (e) {
-                            _isPressed = false;
-                            Helper.showSnackBar(
-                                message: Text(Localization.of(context)
-                                    .getString("network-error")),
-                                context: context,
-                                snackBarBehavior: SnackBarBehavior.floating);
-                            }
-                          }else{
-                            return;
-                          }
-                        },
-                        child: SizedBox(
-                          height: 52,
-                          child: Container(
-                            alignment: Alignment.center,
-                            child: Text(
-                              Localization.of(context)
-                                  .getString("login-button"),
-                              style: UI.textStyle(
-                                  typeface: UI.button,
-                                  color: UI.textPrimaryColorDark(context)),
+                              ),
                             ),
-                          ),
-                        ),
-                        context: context),
+                            context: context),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 12.0),
